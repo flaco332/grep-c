@@ -1,56 +1,70 @@
-# Mini GREP en C — Buscador de patrones en archivos `.txt`
+# Mini GREP TUI en Python — Buscador interactivo de archivos
 
-Este proyecto implementa una herramienta tipo **grep simplificado**, desarrollada en lenguaje **C** para la materia de *Estructuras de Datos*.  
-El programa busca un patrón dentro de todos los archivos `.txt` del **directorio actual** (búsqueda no recursiva) y almacena las coincidencias en una **lista enlazada**.
-
------------------------------------------------------------------------------------------------------------
-
-## Características principales
-
-- Búsqueda de coincidencias dentro de archivos `.txt`.
-- No recorre subdirectorios (no recursivo).
-- Manejo de archivos mediante `dirent.h`.
-- Coincidencias almacenadas en una **lista enlazada**.
-- Registro por coincidencia:
-  - Archivo
-  - Número de línea
-  - Columna donde inicia el patrón
-  - Texto completo de la línea
-- Menú interactivo por consola.
-- Posibilidad de extender a:
-  - Eliminación de archivos con coincidencias
-  - Exportación de resultados
-  - Búsquedas recursivas
+Aplicación ligera construida con [Textual](https://github.com/Textualize/textual) que emula un `grep nombre.ext` sobre **el directorio actual** y muestra los resultados en una interfaz de terminal enriquecida.
 
 -----------------------------------------------------------------------------------------------------------
 
-## Estructura del proyecto
+## Características
 
-grep-c/
-│── README.md
-│── Makefile
-│
-├── src/
-│ ├── main.c
-│ ├── search.c
-│ ├── search.h
-│ ├── list.c
-│ └── list.h
-│
-├── docs/
-│ └── reporte.md
-│
-└── data/
-└── (archivos .txt para pruebas)
+- Índice de todos los archivos del directorio actual (sin entrar en subdirectorios).
+- Uso de **búsqueda binaria** para localizar rápidamente el archivo solicitado.
+- Interfaz TUI con panel de ayuda, tabla de resultados y validación inmediata del comando.
+- Información detallada del archivo encontrado:
+  - Ruta absoluta
+  - Tamaño en bytes
+  - Fecha de última modificación
+- Mensajes claros cuando el archivo no existe o el comando es inválido.
 
 -----------------------------------------------------------------------------------------------------------
 
-Compilar desde terminal:
+## Requisitos
+
+- Python 3.9 o superior.
+- Dependencias: `textual` (incluye `rich`).
+
+Instalación rápida (opcionalmente dentro de un entorno virtual):
 
 ```bash
-make
+python -m venv .venv
+source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install textual
+```
 
-gcc src/main.c src/search.c src/list.c -o mini_grep
+-----------------------------------------------------------------------------------------------------------
 
-./mini_grep
+## Uso
 
+1. Asegúrate de estar en el directorio que deseas inspeccionar.
+2. Ejecuta la aplicación:
+
+```bash
+python grep_tui.py
+```
+
+3. En el campo de entrada escribe comandos del tipo:
+   - `grep archivo.txt`
+   - `grep reporte.pdf`
+
+Solo se consideran los archivos que estén en el mismo directorio desde donde corriste el programa.
+
+-----------------------------------------------------------------------------------------------------------
+
+## Estructura
+
+```
+grep-c/
+├── README.md
+└── grep_tui.py
+```
+
+`grep_tui.py` contiene toda la lógica de indexación, búsqueda binaria y renderizado de la interfaz con Textual.
+
+-----------------------------------------------------------------------------------------------------------
+
+## Próximos pasos sugeridos
+
+- Agregar filtros por extensión o patrones parciales.
+- Integrar búsquedas recursivas opcionales.
+- Mostrar metadatos adicionales (propietario, permisos).
+- Empaquetar como aplicación ejecutable (`pyinstaller`, `textual build`, etc.).
