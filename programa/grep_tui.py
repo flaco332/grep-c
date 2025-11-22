@@ -96,7 +96,7 @@ class GrepFileApp(App):
     def on_mount(self) -> None:
         """Se ejecuta al iniciar la app."""
         self.index_files()
-        # Poner el foco en el input
+        # Poner el foco en el input.
         self.query_one("#command_input", Input).focus()
 
     def render_not_found(self, filename: str) -> Table:
