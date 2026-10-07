@@ -9,7 +9,8 @@ created. Virtual environments and ignored build artifacts stay in this directory
 GitHub publication. The same work branch is used. Existing history is retained
 according to the earlier no-anonymization decision. Publication uses a branch push
 and pull request rather than direct writes to main; no version tag or GitHub Release
-is part of this operation. Remote CI verification is recorded below.
+is part of this operation. GitHub API verification confirms this existing repository
+is **public**, with `main` retained as the default branch. CI evidence is below.
 
 ## Initial state
 
@@ -250,12 +251,14 @@ screenshot is optional. Core implementation needs no additional features.
 The technical refactor is complete and locally verified. The owner selected MIT and
 authorized public GitHub publication. The historical personal email remains because
 anonymization was explicitly deferred; publication does not imply authorization to
-rewrite history. Remote CI and public visibility are the remaining verification
-steps in this follow-up. macOS remains untested. No tag or GitHub Release is planned.
+rewrite history. Remote CI passed on both configured platforms, and the GitHub API
+confirmed public visibility. macOS remains untested. No tag or GitHub Release is created.
 
 ### Publication evidence
 
 - Existing GitHub repository: [flaco332/grep-c](https://github.com/flaco332/grep-c).
+- GitHub API confirmed `visibility: public` and `private: false`; the repository
+  name is unchanged and its description accurately identifies filename search.
 - Source changes are delivered through [pull request #2](https://github.com/flaco332/grep-c/pull/2).
 - MIT/code commit `6187428` passed [PR CI](https://github.com/flaco332/grep-c/actions/runs/37553424633)
   and [push CI](https://github.com/flaco332/grep-c/actions/runs/37553030951).

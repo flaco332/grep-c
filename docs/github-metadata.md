@@ -1,7 +1,8 @@
 # Suggested GitHub metadata
 
-The owner authorized public GitHub publication after the initial repository review.
-The existing repository name is retained; no GitHub Release or version tag is created.
+GitHub API verification confirmed public visibility after the owner authorized
+publication. The existing repository name is retained; no GitHub Release or version
+tag is created. The description below was applied; topics remain optional suggestions.
 
 - **Repository name:** `mini-grep`. The current local/remote name `grep-c` is retained.
 - **Description:** `Academic filename search in Python with binary search, a Textual TUI, and a tested lexer/parser architecture.`
