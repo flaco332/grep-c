@@ -1,7 +1,7 @@
 # Suggested GitHub metadata
 
-These are proposals only. No remote metadata, visibility, tags, release, or GitHub
-settings were changed.
+The owner authorized public GitHub publication after the initial repository review.
+The existing repository name is retained; no GitHub Release or version tag is created.
 
 - **Repository name:** `mini-grep`. The current local/remote name `grep-c` is retained.
 - **Description:** `Academic filename search in Python with binary search, a Textual TUI, and a tested lexer/parser architecture.`
@@ -10,8 +10,7 @@ settings were changed.
 
 The formal-language topics describe the documented academic lineage. Avoid implying
 an implemented automata engine or generated lexer. No speed, security, or production
-readiness badges are justified. CI is configured but has not run on GitHub because
-this branch has not been pushed.
+readiness badges are justified. CI results are recorded in the public release review.
 
 ## Recommended version
 

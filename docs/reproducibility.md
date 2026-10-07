@@ -56,7 +56,6 @@ tests exercise startup, input, results, refresh, errors, and exit. Terminal styl
 and keyboard behavior still depend on the user's terminal emulator.
 
 The GitHub Actions workflow targets Ubuntu/Python 3.11 and Windows/Python 3.13,
-but has not executed on GitHub while this branch remains unpublished. Linux and
-macOS were not run locally; portability is an implementation goal, not a verified
-claim about those systems. The same-repository task uses fresh virtual environments
-instead of a second cloned project.
+with execution recorded in the release review. Linux and macOS were not run locally;
+portability on untested platforms remains an implementation goal. The same-repository
+task uses fresh virtual environments instead of a second cloned project.

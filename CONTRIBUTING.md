@@ -2,7 +2,7 @@
 
 Keep Mini Grep small and educational. Preserve exact filename search and the
 documented binary-search invariant; discuss content search or new backends before
-expanding the scope. Licensing is pending: see [licensing](docs/licensing.md).
+expanding the scope. The project uses [MIT](LICENSE); see [licensing](docs/licensing.md).
 
 From the repository root, use Python 3.11 or newer in a virtual environment:
 

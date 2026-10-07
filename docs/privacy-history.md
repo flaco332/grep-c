@@ -29,10 +29,12 @@ paths, and credentials should not enter tracked files or screenshots.
 
 ## Owner decision
 
-Prepare a plan, **do not execute anonymization**. Existing commits, branches, hashes,
-and remotes have therefore been preserved. No force push, publication, remote rename,
-or visibility change is part of this task. The release checklist must not claim that
-all personal identifiers have been removed.
+The owner requested an anonymization plan **without execution**, then authorized
+public GitHub publication. Existing commits and authorship remain unchanged; no
+force push or history rewrite is performed. Publication consequently exposes the
+historical contact metadata described above. The release checklist does not claim
+that all personal identifiers have been removed. The plan below remains a separate
+future operation requiring its own authorization.
 
 ## Plan for a later authorized operation
 

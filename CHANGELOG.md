@@ -2,11 +2,12 @@
 
 ## Unreleased — proposed 0.1.0
 
-No version has been tagged or published. The older academic commits remain in Git;
+No version has been tagged or released. The older academic commits remain in Git;
 this changelog starts with the first packaging effort rather than inventing releases.
 
 ### Added
 
+- MIT license, SPDX package metadata, and license inclusion in distribution artifacts.
 - Installable `mini-grep` command and `python -m mini_grep` entry point.
 - Exact filename CLI, directory selection, and consistent exit codes.
 - Explicit command parser with quoted filenames and distinct syntax errors.
@@ -26,5 +27,4 @@ this changelog starts with the first packaging effort rather than inventing rele
 
 ### Pending
 
-- Contributor authorization and license selection.
 - Separate approved history anonymization if desired; no rewriting performed.

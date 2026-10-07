@@ -5,6 +5,12 @@ Git refs/objects. Work branch: **`feat/professional-public-release`**, created f
 `ae2b9a0` before tracked application changes. No second project or checkout was
 created. Virtual environments and ignored build artifacts stay in this directory.
 
+**Publication update:** the owner subsequently authorized MIT licensing and public
+GitHub publication. The same work branch is used. Existing history is retained
+according to the earlier no-anonymization decision. Publication uses a branch push
+and pull request rather than direct writes to main; no version tag or GitHub Release
+is part of this operation. Remote verification is recorded below after completion.
+
 ## Initial state
 
 - Clean `main` at `ae2b9a05443c386ed7bb7fc7cba53b30dda0fb1c`; seven reachable commits.
@@ -52,7 +58,7 @@ extra arguments. That behavior is now explicit: quote filenames containing space
 | No ignore rules | Future environment/credential commits | Python/build/IDE/credential ignores and deterministic LF text |
 | Academic claims and current scope confused | Misleading portfolio story | Evidence-qualified academic docs and honest filename-only README |
 | Historical personal email | Privacy exposure through commit metadata | Separate anonymization plan; no rewrite performed |
-| No project license; multiple contributors | Redistribution rights unresolved | MIT recommendation documented; license left pending by owner |
+| No project license; multiple contributors | Clear distribution terms needed | Owner selected MIT; LICENSE, SPDX metadata and package inclusion added; attribution retained |
 
 No useful search behavior was removed. Original sample files and launcher path were
 kept. No content-search feature, hash backend, watcher, generated parser, recursive
@@ -144,15 +150,15 @@ not an assurance of future security or proof of no unknown vulnerabilities.
 Installed metadata/license notices identify MIT for Textual/Rich and their Markdown,
 linkification, and platformdirs dependencies; Pygments uses BSD-2-Clause and
 typing-extensions PSF-2.0. They are installed, not vendored. No incompatible copied
-source or license notices were found; authorization to license contributed project
-code remains unconfirmed. [Licensing decision](docs/licensing.md).
+source or license notices were found. The owner subsequently selected MIT; historical
+line-by-line provenance was not independently established. [Licensing decision](docs/licensing.md).
 
 `requirements-dev.lock` records the exact validated dependency versions without
 editable paths or personal metadata. It is a pinned snapshot, not a hash/multi-OS
 lock. `MANIFEST.in` packages docs, tests, samples, tooling, and the lock in the sdist;
 the wheel contains application modules and distribution metadata only. Build products,
 environments, and caches are ignored. Version 0.1.0 is proposed, with an Unreleased
-changelog; no tag, release, or package publication exists.
+changelog; no tag, GitHub Release, or package-registry publication exists.
 
 ## Security and privacy
 
@@ -190,20 +196,23 @@ runs lint/format/tests/dependency consistency, builds artifacts, and checks the 
 entry point. Actions are pinned to inspected commit SHAs with read-only repository
 permission and no persisted checkout credentials. The workflow is local configuration;
 no remote run is claimed. [Repository description/topics](docs/github-metadata.md)
-are suggestions only. No remote rename, visibility change, push, tag, or release occurred.
+were suggestions during the initial preparation. Public publication was later authorized;
+the repository name remains unchanged. No tag or GitHub Release is created.
 
 ## Git review and remaining work
 
 The existing history remains intact. Original authorship is preserved. New commits
 use the already-configured GitHub noreply identity; no Git identity configuration
-is changed. Main and stored remote refs remain at their original commits. Changes
-are organized into three local commits: application refactor/packaging; tests,
-benchmark, reproducibility and CI; documentation and release review. Final status,
-diff, tracked-file inventory, and all-ref history are checked at handoff.
+is changed. The original preparation kept main and remote refs at their existing
+commits. That work was organized into three commits: application refactor/packaging;
+tests, benchmark, reproducibility and CI; documentation and release review. MIT
+licensing and publication updates form a subsequent commit. Local main is not
+edited directly; remote main is updated through a pull request. Final status, diff,
+tracked-file inventory, and all-ref history are checked at handoff.
 
 ### File inventory
 
-Added: `.gitignore`, `pyproject.toml`, `MANIFEST.in`, `requirements-dev.lock`,
+Added: `LICENSE`, `.gitignore`, `pyproject.toml`, `MANIFEST.in`, `requirements-dev.lock`,
 `.github/workflows/ci.yml`; eight package modules under `src/mini_grep/`; five
 test files under `tests/`; `scripts/benchmark.py`; `CHANGELOG.md`, `CONTRIBUTING.md`,
 `SECURITY.md`, this review; and these eight documents under `docs/`:
@@ -214,10 +223,10 @@ Modified: `README.md`, `.gitattributes`, `programa/grep_tui.py`. Removed: **none
 The six original empty text files remain unchanged. No local environment, cache,
 temporary private mailmap, build output, or unexpected binary is tracked.
 
-Before public/open-source publication: confirm contributor rights and add the agreed
-license; review the anonymization plan and approve any later rewrite separately;
-run CI after an approved push and verify Linux behavior. A real sanitized screenshot
-is optional. Core implementation, tests, and documentation require no extra features.
+The selected MIT license is included in source and distribution artifacts. The
+anonymization plan remains a separate future operation; the owner has not authorized
+rewriting. Remote CI and visibility are verified during publication. A real sanitized
+screenshot is optional. Core implementation needs no additional features.
 
 ## Publication checklist
 
@@ -228,7 +237,7 @@ is optional. Core implementation, tests, and documentation require no extra feat
 - [x] Lint and formatting passing.
 - [x] Clean artifact installation tested outside the repository working directory.
 - [x] README accurately distinguishes academic origin and current implementation.
-- [ ] License present: intentionally pending contributor authorization.
+- [x] MIT license present, declared in package metadata and included in artifacts.
 - [x] CI configured; remote execution pending an authorized push.
 - [x] No unwanted binaries/environments/caches selected for tracking.
 - [x] No private local paths in authored public-facing files.
@@ -237,12 +246,10 @@ is optional. Core implementation, tests, and documentation require no extra feat
 
 ## Recommendation
 
-The technical refactor is complete and locally verified. Publication preparation
-has three explicit warnings: contributor authorization/license selection is pending;
-the historical personal email remains until a separately approved operation; and
-CI/Linux execution still needs remote evidence. The owner chose to defer licensing
-and requested only an anonymization plan. Those are recorded decisions, not unfinished
-implementation. Obtain publication approval and resolve the desired licensing/privacy
-policy before changing remote state. No publication is authorized by this task.
+The technical refactor is complete and locally verified. The owner selected MIT and
+authorized public GitHub publication. The historical personal email remains because
+anonymization was explicitly deferred; publication does not imply authorization to
+rewrite history. Remote CI and public visibility are the remaining verification
+steps in this follow-up. macOS remains untested. No tag or GitHub Release is planned.
 
 **READY WITH WARNINGS**

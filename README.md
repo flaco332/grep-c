@@ -167,9 +167,8 @@ checker is configured. [Contributing](CONTRIBUTING.md) describes the small workf
 For a repeatable validation environment, `requirements-dev.lock` records the tested
 dependency versions; see [reproducibility](docs/reproducibility.md).
 
-GitHub Actions is configured for Python 3.11/Linux and 3.13/Windows. It has not run
-remotely because this branch is unpublished. Local verification covers Windows with
-Python 3.11 and 3.13; Linux/macOS support is intended, not locally verified.
+GitHub Actions checks Python 3.11/Linux and 3.13/Windows. Local verification covers
+Windows with Python 3.11 and 3.13. macOS support is intended, not verified.
 
 ## How it differs from GNU grep
 
@@ -189,12 +188,12 @@ Potential future work: opt-in recursion or filename filters, then separately sco
 content search if useful. Regex support is deferred; no additional backend is planned.
 See [GitHub metadata and screenshot guidance](docs/github-metadata.md).
 
-## License and publication status
+## License
 
-**License pending contributor authorization.** MIT is recommended but has not been
-granted; see [licensing](docs/licensing.md). Package version `0.1.0` is proposed and
-unreleased. The historical personal-email finding and a plan for later anonymization
-are documented in [privacy review](docs/privacy-history.md). No history was rewritten.
+This project uses the [MIT License](LICENSE). Contributor attribution remains in
+Git history; dependency licenses remain with their own distributions. See
+[licensing](docs/licensing.md). Package version `0.1.0` has not been tagged or released.
 
-[Public release review](PUBLIC_RELEASE_REVIEW.md) records the actual checks and
-remaining warnings. Nothing has been pushed, published, tagged, or released.
+[Public release review](PUBLIC_RELEASE_REVIEW.md) records the verification and
+historical privacy finding. No history was rewritten; the separately documented
+[anonymization plan](docs/privacy-history.md) remains unexecuted.
