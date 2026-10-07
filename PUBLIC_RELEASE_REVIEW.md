@@ -9,7 +9,7 @@ created. Virtual environments and ignored build artifacts stay in this directory
 GitHub publication. The same work branch is used. Existing history is retained
 according to the earlier no-anonymization decision. Publication uses a branch push
 and pull request rather than direct writes to main; no version tag or GitHub Release
-is part of this operation. Remote verification is recorded below after completion.
+is part of this operation. Remote CI verification is recorded below.
 
 ## Initial state
 
@@ -129,7 +129,8 @@ but are not scientific comparisons. [Performance details](docs/performance.md).
 - The TUI also launched in a real Windows terminal, found a supplied sample, and
   exited normally. Compact help and metadata rendering preserve result space at 80×24.
 - Documented demo searches, version/help commands, and the old launcher were verified.
-- Linux/macOS have not run locally. CI is configured, not remotely executed.
+- Linux/macOS have not run locally. Remote GitHub Actions passed on Ubuntu/Python
+  3.11 and Windows/Python 3.13 for commit `6187428`; macOS remains untested.
 
 ## Dependencies, packaging, and reproducibility
 
@@ -194,8 +195,8 @@ The original report is absent, so reconstructed productions are labeled explicit
 CI has two jobs: Ubuntu/Python 3.11 and Windows/Python 3.13. It installs the dev extra,
 runs lint/format/tests/dependency consistency, builds artifacts, and checks the version
 entry point. Actions are pinned to inspected commit SHAs with read-only repository
-permission and no persisted checkout credentials. The workflow is local configuration;
-no remote run is claimed. [Repository description/topics](docs/github-metadata.md)
+permission and no persisted checkout credentials. The workflow passed remotely on
+both configured platforms. [Repository description/topics](docs/github-metadata.md)
 were suggestions during the initial preparation. Public publication was later authorized;
 the repository name remains unchanged. No tag or GitHub Release is created.
 
@@ -238,7 +239,7 @@ screenshot is optional. Core implementation needs no additional features.
 - [x] Clean artifact installation tested outside the repository working directory.
 - [x] README accurately distinguishes academic origin and current implementation.
 - [x] MIT license present, declared in package metadata and included in artifacts.
-- [x] CI configured; remote execution pending an authorized push.
+- [x] CI configured and passed remotely on Linux/Python 3.11 and Windows/Python 3.13.
 - [x] No unwanted binaries/environments/caches selected for tracking.
 - [x] No private local paths in authored public-facing files.
 - [x] Complete locally available baseline history reviewed; anonymization not executed.
@@ -251,5 +252,15 @@ authorized public GitHub publication. The historical personal email remains beca
 anonymization was explicitly deferred; publication does not imply authorization to
 rewrite history. Remote CI and public visibility are the remaining verification
 steps in this follow-up. macOS remains untested. No tag or GitHub Release is planned.
+
+### Publication evidence
+
+- Existing GitHub repository: [flaco332/grep-c](https://github.com/flaco332/grep-c).
+- Source changes are delivered through [pull request #2](https://github.com/flaco332/grep-c/pull/2).
+- MIT/code commit `6187428` passed [PR CI](https://github.com/flaco332/grep-c/actions/runs/37553424633)
+  and [push CI](https://github.com/flaco332/grep-c/actions/runs/37553030951).
+- Both jobs passed lint, formatting, tests, dependency consistency, build and version
+  checks. The owner explicitly approved public visibility; the historical-email plan
+  remains unexecuted. No GitHub Release, tag, or package-registry upload is included.
 
 **READY WITH WARNINGS**
