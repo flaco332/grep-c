@@ -1,0 +1,26 @@
+# Python environments and generated artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.agents/
+.codex/
+.aws/
+.DS_Store
+Thumbs.db
